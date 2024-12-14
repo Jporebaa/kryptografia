@@ -28,6 +28,11 @@ public class EncryptionApp {
         desButton.addActionListener(e -> DESCipher.openWindow());
         mainPanel.add(desButton);
 
+        // Przycisk dla szyfrowania AES
+        JButton aesButton = new JButton("Szyfrowanie AES");
+        aesButton.addActionListener(e -> AESCipher.openWindow());
+        mainPanel.add(aesButton);
+
         // Przycisk dla szyfrowania plików
         JButton fileEncryptionButton = new JButton("Szyfrowanie Pliku");
         fileEncryptionButton.addActionListener(e -> FileEncryption.openWindow());
@@ -42,6 +47,11 @@ public class EncryptionApp {
         JButton digitalSignatureButton = new JButton("Podpis Cyfrowy");
         digitalSignatureButton.addActionListener(e -> DigitalSignature.openWindow());
         mainPanel.add(digitalSignatureButton);
+
+        //Przycisk szyfrowania hmac
+        JButton hmacButton = new JButton("Szyfrowanie HMAC");
+        hmacButton.addActionListener(e -> HMACCipher.openWindow());
+        mainPanel.add(hmacButton);
 
         // Dodanie panelu do ramki i wyświetlenie GUI
         mainFrame.add(mainPanel);
